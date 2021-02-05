@@ -19,7 +19,7 @@
     "build:clean": "rimraf lib es dist assets",
     "lint": "yarn lint:js && yarn lint:style",
     "lint:fix": "yarn lint-fix:js && yarn lint-fix:style",
-    "lint:js": "./node_modules/.bin/eslint --ext .js ./src ./__tests__ ./example",
+    "lint:js": "./node_modules/.bin/eslint ./src ./__tests__",
     "lint:style": "stylelint '{example,src}/**/*.less' --syntax less",
     "lint-fix:js": "yarn lint:js --fix",
     "lint-fix:style": "yarn lint:style --fix",

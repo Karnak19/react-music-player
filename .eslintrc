@@ -79,11 +79,5 @@
     "react": {
       "version": "16.13.1"
     }
-    // "import/resolver": {
-    //   "node": {
-    //     "paths": ["src"],
-    //     "extensions": [".js", ".jsx", ".ts", ".tsx"]
-    //   }
-    // }
   }
 }
