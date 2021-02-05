@@ -43,7 +43,8 @@
     "prettier": "prettier -c --write '**/*'",
     "pretty:quick": "pretty-quick",
     "lint-staged": "lint-staged",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "bundlesize": "bundlesize"
   },
   "sideEffects": [
     "assets/*",

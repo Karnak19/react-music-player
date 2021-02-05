@@ -1,4 +1,4 @@
-name: Lint Test and Build
+name: 💡 Lint Test and Build
 
 on:
   push:
@@ -52,11 +52,13 @@ jobs:
       - name: Build, and test
         run: |
           yarn build
+          yarn bundlesize
           yarn test
           yarn ci:coverage
         env:
           CI: true
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          BUNDLESIZE_GITHUB_TOKEN: ${{ secrets.BUNDLESIZE_GITHUB_TOKEN }}
 
       - name: Build example page
         if: github.event_name == 'push' && startsWith( env.commitmsg , 'chore(release):' ) || startsWith( env.commitmsg , 'docs:' )
