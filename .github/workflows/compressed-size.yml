@@ -12,4 +12,4 @@ jobs:
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
           pattern: './dist/**/*.min.js,./assets/index.css'
-          build-script: 'build:'
+          build-script: 'build'
