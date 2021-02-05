@@ -5,7 +5,7 @@ const webpack = require('webpack')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 const HOST = 'localhost'
-const PORT = 8081
+const PORT = 8089
 
 const getPublicPath = () => {
   if (
@@ -91,13 +91,12 @@ module.exports = () => {
     devtool: isDev ? 'eval-source-map' : false,
     resolve: {
       enforceExtension: false,
-      extensions: ['.mjs', '.js', '.jsx', '.json'],
-      mainFields: ['module', 'main'],
+      extensions: ['.js', '.jsx', '.json'],
       modules: [path.resolve('src'), path.resolve('.'), 'node_modules'],
     },
-    externals: {
-      async: 'commonjs async',
-    },
+    // externals: {
+    //   async: 'commonjs async',
+    // },
     devServer: {
       contentBase: path.join(__dirname, '../example/'),
       host: HOST,
